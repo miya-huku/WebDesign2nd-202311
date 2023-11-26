@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! destyle.css v4.0.0 | MIT License | https://github.com/nicolas-cusan/destyle.min.css */
 *, ::before, ::after {
   box-sizing: border-box;
@@ -251,6 +252,10 @@ p {
   font-size: 16px;
 }
 
+p.p-center {
+  text-align: center;
+}
+
 li {
   list-style: none;
 }
@@ -408,6 +413,16 @@ li {
   text-align: center;
 }
 
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.flex-center p {
+  text-align: center;
+}
+
 .header {
   position: relative;
   left: 0;
@@ -502,6 +517,33 @@ li {
 }
 .header__scroll__logo img {
   width: 100%;
+}
+
+.footer {
+  width: 100%;
+  background-color: #323232;
+  padding: 44px;
+  color: #FFFFFF;
+  text-align: center;
+}
+.footer p {
+  font-family: "Oswald", sans-serif;
+}
+.footer p img {
+  width: 132px;
+}
+.footer-sns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: fit-content;
+  margin: 30px auto;
+}
+.footer-sns li {
+  width: 50px;
+}
+.footer-sns li img {
+  height: 20px;
 }
 
 .main-visual {
@@ -640,4 +682,94 @@ li {
 }
 .about-small p {
   font-size: 0.8em;
+}
+
+.works {
+  background-color: #F5F5F5;
+}
+
+.box-02 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slides-wrapper {
+  display: flex;
+  gap: 30px;
+  width: calc(100% - 50px);
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slide-img {
+  width: 50vw;
+  height: 50vh;
+  object-fit: cover;
+}
+
+.plan-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+.plan-list-box {
+  width: 24%;
+}
+@media screen and (max-width:1024px) {
+  .plan-list-box {
+    width: 50%;
+  }
+}
+@media screen and (max-width:599px) {
+  .plan-list-box {
+    width: 100%;
+  }
+}
+.plan-list-box-img {
+  position: relative;
+}
+.plan-list-box-img__photo {
+  position: relative;
+  z-index: 4;
+  width: 100%;
+}
+.plan-list-box-img__label {
+  font-family: "Yusei Magic", sans-serif;
+  color: #FFFFFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  z-index: 5;
+  width: 100%;
+  font-size: 22px;
+  text-align: center;
+  text-shadow: -1px -1px 3px #000;
+}
+.plan-list-box-content h4 {
+  text-align: center;
+  padding: 4px 0;
+}
+.plan-list-box-content p {
+  line-height: 1.4;
+  padding: 0 8px;
+  text-align: justify;
+  font-size: 14px;
+}
+.plan-annotation {
+  margin: 60px auto 0;
+  font-size: 0.9em;
+}
+.plan-annotation li:before {
+  content: "※";
+}
+
+.contact {
+  background: rgba(255, 230, 0, 0.1);
 }/*# sourceMappingURL=style.css.map */

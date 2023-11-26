@@ -430,6 +430,9 @@ li {
   z-index: 99;
   display: flex;
   flex-direction: column;
+  transition: all 0.5s ease;
+  /* 初期透明度を設定 */
+  opacity: 1;
 }
 @media screen and (max-width:599px) {
   .header {
@@ -519,6 +522,51 @@ li {
   width: 100%;
 }
 
+/* .header-scrollが追加されたときのスタイル */
+.header-scroll {
+  height: 80px;
+  top: 0px;
+  left: 0;
+  z-index: 99;
+  position: relative;
+  transition: all 0.5s ease;
+  padding: 0;
+}
+
+/* .header-areaのスタイル変更 */
+.header-scroll .header-area {
+  width: 100%;
+  height: 80px;
+  min-width: unset;
+  max-width: unset;
+  min-height: unset;
+  position: fixed;
+  padding: 0;
+}
+
+/* .header__logoのスタイル変更 */
+.header-scroll .header__logo {
+  top: 11px;
+  left: 30px;
+  width: 164px;
+}
+
+/* .header__logo内のimgのスタイル変更 */
+.header-scroll .header__logo img {
+  width: 100%;
+}
+
+.header-scroll .navigation {
+  flex-direction: row;
+  left: unset;
+  right: 40px;
+  padding-top: 24px;
+}
+
+.header-scroll .header__scrollbox {
+  display: none;
+}
+
 .footer {
   width: 100%;
   background-color: #323232;
@@ -575,7 +623,7 @@ li {
   font-size: 36px;
   text-align: right;
   position: relative;
-  z-index: 100;
+  z-index: 98;
 }
 @media screen and (max-width:1024px) {
   .main-visual__catch1 {
@@ -595,7 +643,7 @@ li {
   font-size: 18px;
   text-align: right;
   position: relative;
-  z-index: 100;
+  z-index: 98;
 }
 @media screen and (max-width:1024px) {
   .main-visual__catch2 {

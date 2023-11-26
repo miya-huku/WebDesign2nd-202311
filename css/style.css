@@ -333,7 +333,7 @@ li {
     align-items: center;
     justify-content: center;
     position: fixed;
-    top: 11px;
+    top: 20px;
     right: 0;
     z-index: 2;
     height: 60px;
@@ -472,7 +472,7 @@ li {
 }
 @media screen and (max-width:599px) {
   .header__logo {
-    top: 11px;
+    top: 9px;
     left: 30px;
     width: 164px;
   }
@@ -546,7 +546,7 @@ li {
 
 /* .header__logoのスタイル変更 */
 .header-scroll .header__logo {
-  top: 11px;
+  top: 9px;
   left: 30px;
   width: 164px;
 }
@@ -567,10 +567,55 @@ li {
   display: none;
 }
 
+/* スマホ表示時の基本スタイル */
+.hamburger-menu {
+  display: none; /* デフォルトでは非表示 */
+}
+@media screen and (max-width:599px) {
+  .hamburger-menu {
+    display: block; /* スマホ表示時に表示 */
+    /* その他のスタイル（サイズ、位置など） */
+  }
+}
+
+.global-menu {
+  display: none; /* デフォルトでは非表示 */
+  opacity: 0; /* GSAPで操作するために透明度を0に設定 */
+}
+@media screen and (max-width:599px) {
+  .global-menu {
+    display: block; /* スマホ表示時に表示 */
+    position: fixed; /* 固定位置 */
+    top: 0px;
+    left: 0;
+    width: 100%; /* 画面全体をカバー */
+    transform: translateX(-100%); /* 初期状態は左側に隠れている */
+    /* その他のスタイル（背景色、テキストスタイルなど） */
+    height: 100vh;
+    background-color: #F5F5F5;
+    padding: 50px 0;
+  }
+  .global-menu li {
+    border-bottom: 1px dotted;
+    padding: 0;
+  }
+  .global-menu li a {
+    display: block;
+    padding: 28px;
+  }
+}
+
+.header-scroll .global-menu.navigation {
+  flex-direction: row;
+  left: 0;
+  right: unset;
+  padding-top: 24px;
+}
+
 .footer {
   width: 100%;
-  background-color: #323232;
-  padding: 44px;
+  background-color: #34321e;
+  padding: 88px;
   color: #FFFFFF;
   text-align: center;
 }
@@ -634,7 +679,7 @@ li {
 @media screen and (max-width:599px) {
   .main-visual__catch1 {
     width: 100%;
-    font-size: 28px;
+    font-size: 24px;
     text-align: center;
   }
 }
@@ -680,7 +725,7 @@ li {
 }
 @media screen and (max-width:1024px) {
   .about-box__photo {
-    width: 33%;
+    width: 45%;
     margin: 40px auto 0;
     height: 221px;
   }
@@ -721,6 +766,14 @@ li {
 }
 .about-box-content__name {
   text-align: right;
+}
+.about-box-content__comment2 {
+  text-align: justify;
+}
+@media screen and (max-width:599px) {
+  .about-box-content__comment2 {
+    font-size: 14px;
+  }
 }
 .about-small {
   padding-top: 30px;
@@ -770,6 +823,7 @@ li {
 @media screen and (max-width:1024px) {
   .plan-list-box {
     width: 50%;
+    padding-bottom: 48px;
   }
 }
 @media screen and (max-width:599px) {
@@ -821,4 +875,18 @@ li {
 
 .contact {
   background: rgba(255, 230, 0, 0.1);
+}
+
+.pc-slideup-cta-board[data-v-94a292ea] {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+.pc-slideup-cta-board {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */

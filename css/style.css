@@ -765,6 +765,7 @@ li {
 .plan-annotation {
   margin: 60px auto 0;
   font-size: 0.9em;
+  width: fit-content;
 }
 .plan-annotation li:before {
   content: "※";

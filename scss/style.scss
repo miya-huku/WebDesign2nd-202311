@@ -1,0 +1,240 @@
+@use 'reset';
+@use 'variables' as *;
+@use 'common';
+@use 'modules';
+@use 'mixin' as *;
+@use 'header';
+@use 'footer';
+
+.main-visual {
+    height: 100vh;
+    min-height: 700px;
+    width: 100%;
+    background: url(../img/main-visual.webp) center center no-repeat;
+    background-size: cover;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-right: 60px;
+    @include mq(tab){
+        padding-right: 4px;
+    }
+    @include mq(sp){
+        padding-right: 0px;
+        align-items: center;
+    }
+    &__catch1{
+        color: $text-02;
+        font-size: 36px;
+        text-align: right;
+        position: relative;
+        z-index: 98;
+        @include mq(tab){
+            font-size: 32px;
+            width: 50%;
+        }
+        @include mq(sp){
+            width: 100%;
+            font-size: 24px;
+            text-align: center;
+        }
+    }
+    &__catch2{
+        color: $text-02;
+        font-size: 18px;
+        text-align: right;
+        position: relative;
+        z-index: 98;
+        @include mq(tab){
+            font-size: 16px;
+            width: 50%;
+        }
+        @include mq(sp){
+            width: 100%;
+            font-size: 14px;
+            text-align: center;
+        }
+    }
+}
+
+.about{
+    width: 100%;
+    background-color: $base-02;
+
+    &-box{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        @include mq(tab){
+            flex-direction: column-reverse;
+        }
+        &__photo{
+            width: 35%;
+            position: relative;
+            @include mq(tab){
+                width: 45%;
+                margin: 40px auto 0;
+                height: 221px;
+            }
+            &__img1{
+                position: absolute;
+                width: 60%;
+                top:0;
+                right: 0;
+                z-index: 5;
+                img{
+                    width: 100%;
+                }
+            }
+            &__img2{
+                position: absolute;
+                width: 85%;
+                bottom: 0;
+                left: 0;
+                z-index: 4;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+
+        &-content{
+            width: 65%;
+            padding: 0 0 0 50px;
+            line-height: 1.8;
+            @include mq(tab){
+                width: 100%;
+                padding: 0;
+            }
+
+            &__comment{
+                text-align: justify;
+            }
+            &__name{
+                text-align: right;
+            }
+            &__comment2{
+                text-align: justify;
+                @include mq(sp){
+                    font-size: 14px;
+                }
+               
+            }
+        }
+    }
+
+    &-small{
+        padding-top: 30px;
+        h3{
+            font-size: 0.9em;
+        }
+        p{
+            font-size: 0.8em;
+        }
+    }
+}
+.works{
+    background-color: $base-03;
+}
+//スクロールしたら横に移動
+.box-02{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .slides-wrapper{
+    display: flex;
+    gap: 30px;
+    width: calc(100% - 50px);
+    margin: 0 auto;
+    overflow: hidden;
+ }
+ .slide-img{
+   width: 50vw;
+   height: 50vh;
+   object-fit: cover;
+ }
+//ここまで
+
+.plan{
+    &-list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        &-box{
+            width: 24%;
+            @include mq(tab){
+                width: 50%;
+                padding-bottom: 48px;
+            }
+            @include mq(sp){
+                width: 100%;
+            }
+            &-img{
+                position: relative;
+                &__photo{
+                    position: relative;
+                    z-index: 4;
+                    width: 100%;
+                }
+                &__label{
+                    font-family: $yusei;
+                    color: $text-02;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    -webkit-transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%);
+                    z-index: 5;
+                    width: 100%;
+                    font-size: 22px;
+                    text-align: center;
+                    text-shadow:-1px -1px 3px #000;
+                }
+            }
+            &-content{
+                h4{
+                    text-align: center;
+                    padding: 4px 0;
+                }
+                p{
+                    line-height: 1.4;
+                    padding: 0 8px;
+                    text-align: justify;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    &-annotation{
+        li:before { content:"※" }
+        margin: 60px auto 0;
+        font-size: 0.9em;
+        width: fit-content;
+    }
+}
+
+.contact{
+    background: $base-02;
+}
+
+.pc-slideup-cta-board[data-v-94a292ea]{
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+.pc-slideup-cta-board{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

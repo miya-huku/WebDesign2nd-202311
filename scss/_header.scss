@@ -1,0 +1,189 @@
+@use 'variables'as *;
+@use 'mixin' as *;
+
+.header {
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s ease;
+    /* 初期透明度を設定 */
+    opacity: 1;
+    @include mq(sp){
+        flex-direction: row;
+    }
+    &-area{
+        position: absolute;
+        width: 30%;
+        min-width:300px ;
+        max-width: 500px;
+        background: $main-01;
+        height: 100vh;
+        min-height: 700px;
+        padding: 60px;
+        @include mq(sp){
+            min-width:unset ;
+            max-width:unset;
+            min-height: unset;
+            flex-direction:row;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+            width: 100%;
+            padding: 0 40px;
+        }
+
+        &__scroll{
+            position: fixed;
+        }
+    }
+
+    &__logo{
+        position: absolute;
+        left: 60px;
+        top:120px;
+        @include mq(sp){
+            top:9px;
+            left:30px;
+            width: 164px;
+        }
+
+        img{
+            width: calc(100% - 60px);
+            @include mq(sp){
+                width: 100%;
+            }
+        }
+
+
+    }
+
+    &__scrollbox{
+        position: absolute;
+        left: 60px;
+        bottom:60px;
+        border-left:1px solid $text-01;
+        background:linear-gradient(302deg, transparent 0%, transparent 27%, #323232 1%, #323232 28%, transparent 0, transparent 100%);
+        width: 14px;
+        height: 92px;
+        padding: 10px;
+        &__txt{
+            font-family: $oswald;
+            font-weight: 300;
+            font-size: 16px;
+        }
+        @include mq(sp){
+            display: none;
+        }
+    }
+
+    &__scroll{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 80px;
+        width: 100%;
+        padding: 0 40px;
+    
+        &__logo {
+            top:16px;
+            left:30px;
+            width: 164px;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+/* .header-scrollが追加されたときのスタイル */
+.header-scroll {
+    height: 80px;
+    top: 0px;
+    left: 0;
+    z-index: 99;
+    position: relative;
+    transition: all 0.5s ease;
+    padding: 0;
+  }
+  
+  /* .header-areaのスタイル変更 */
+  .header-scroll .header-area {
+    width: 100%;
+    height: 80px;
+    min-width: unset;
+    max-width: unset;
+    min-height: unset;
+    position: fixed;
+    padding: 0;
+  }
+  
+  /* .header__logoのスタイル変更 */
+  .header-scroll .header__logo {
+    top: 9px;
+    left: 30px;
+    width: 164px;
+  }
+  
+  /* .header__logo内のimgのスタイル変更 */
+  .header-scroll .header__logo img {
+    width: 100%;
+  }
+
+  .header-scroll .navigation{
+    flex-direction: row;
+    left: unset;
+    right: 40px;
+    padding-top: 24px;
+  }
+
+  .header-scroll .header__scrollbox{
+    display: none;
+  }
+
+
+  /* スマホ表示時の基本スタイル */
+.hamburger-menu {
+    display: none; /* デフォルトでは非表示 */
+    @include mq(sp){
+        display: block; /* スマホ表示時に表示 */
+        /* その他のスタイル（サイズ、位置など） */
+    }
+  }
+  
+  .global-menu {
+    display: none; /* デフォルトでは非表示 */
+    opacity: 0; /* GSAPで操作するために透明度を0に設定 */
+    @include mq(sp){
+        display: block; /* スマホ表示時に表示 */
+        position: fixed; /* 固定位置 */
+        top: 0px;
+        left: 0;
+        width: 100%; /* 画面全体をカバー */
+        transform: translateX(-100%); /* 初期状態は左側に隠れている */
+        /* その他のスタイル（背景色、テキストスタイルなど） */
+        height: 100vh;
+        background-color: $base-03;
+        padding: 50px 0;
+
+        li{
+            border-bottom: 1px dotted;
+            padding: 0;
+
+            a{
+                display: block;
+                padding: 28px;
+            }
+        }
+
+    }
+  }
+  .header-scroll .global-menu.navigation{
+    flex-direction: row;
+    left: 0;
+    right: unset;
+    padding-top: 24px;
+  }
+  

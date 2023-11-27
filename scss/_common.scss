@@ -1,0 +1,66 @@
+@use 'variables' as *;
+@use 'mixin' as *;
+
+body{
+    color: $text-01;
+    font-family: $notosans;
+    background: $base-01;
+}
+h1{
+    font-size: 36px;
+}
+h2{
+    font-size: 60px;
+    font-family: $oswald;
+    font-weight: 700;
+    text-align: center;
+}
+.section-title__sub{
+    text-align: center;
+}
+.section-title{
+    padding-bottom: 60px;
+}
+h3{
+    font-size: 20px;
+    font-weight: 500;
+}
+h4{
+    font-size: 20px;
+    font-family: $yusei;
+}
+p{
+    font-size: 16px;
+}
+p.p-center{
+    text-align: center;
+}
+li{
+    list-style:none;
+}
+
+.section{
+    padding: 120px 0;
+    @include mq(sp){
+        padding: 90px 0;
+    }
+}
+
+.contents-container{
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+
+    @include mq(sp){
+        width: 100%;
+        padding: 0 30px;
+    }
+
+    &--wide{
+        width: 100%;
+        max-width: initial;
+        @include mq(sp){
+            padding: 0;
+        }
+    }
+}

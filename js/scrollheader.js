@@ -63,3 +63,51 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
   
+
+const menu = document.querySelector('.mobile-menu.hamburger-menu');
+const bars = document.querySelectorAll('.mobile-menu.hamburger-menu .mobile-menu__border');
+const links = document.querySelectorAll('.mobile-menu-ul .navigation__list a');
+let isOpen = false;
+
+function toggleMenu() {
+  if (isOpen) {
+    // メニューをハンバーガー状態に戻す
+    gsap.to(bars[0], { rotation: 0, y: 0, duration: 0.5 });
+    gsap.to(bars[1], { opacity: 1, duration: 0.5 });
+    gsap.to(bars[2], { rotation: 0, y: 0, duration: 0.5 });
+    isOpen = false;
+  } else {
+    // メニューをバツ印にする
+    gsap.to(bars[0], { rotation: 45, y: 11, duration: 0.5 });
+    gsap.to(bars[1], { opacity: 0, duration: 0.5 });
+    gsap.to(bars[2], { rotation: -45, y: -11, duration: 0.5 });
+    isOpen = true;
+  }
+}
+
+menu.addEventListener('click', toggleMenu);
+
+// リンクがクリックされたときにメニューをリセットする
+links.forEach(link => {
+  link.addEventListener('click', () => {
+    if (isOpen) {
+      toggleMenu();
+    }
+  });
+});
+
+
+window.addEventListener('scroll', function() {
+  const scrollTop = window.scrollY;
+  const scrollHeight = document.documentElement.scrollHeight;
+  const clientHeight = document.documentElement.clientHeight;
+
+  const atBottom = scrollTop + clientHeight >= scrollHeight;
+
+  if (atBottom) {
+    // ここで、一番下に達した際のスクロールを制御する処理を記述
+    // 例えば、一番下に達したらスクロールを少し上に戻す
+    window.scrollTo(0, scrollHeight - clientHeight);
+  }
+});
+

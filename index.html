@@ -37,7 +37,7 @@
                 </div>
             </div>
             <nav>
-                <ul class="navigation global-menu">
+                <ul class="mobile-menu-ul navigation global-menu">
                     <li class="navigation__list"><a href="#about">About</a></li>
                     <li class="navigation__list"><a href="#works">Works</a></li>
                     <li class="navigation__list"><a href="#plan">Plan</a></li>
@@ -109,11 +109,54 @@
                 </div>
                 <div class="box-02">
                     <div class="slides-wrapper fadeup">
-                       <div class="slide"><img class="slide-img" src="./img/slide-01.webp" alt=""></div>
-                       <div class="slide"><img class="slide-img" src="./img/slide-02.webp" alt=""></div>
-                       <div class="slide"><img class="slide-img" src="./img/slide-03.webp" alt=""></div>
-                       <div class="slide"><img class="slide-img" src="./img/slide-04.webp" alt=""></div>
-                       <div class="slide"><img class="slide-img" src="./img/slide-05.webp" alt=""></div>
+                        <div class="slide">
+                            <img class="slide-img pc modal-trigger" src="./img/slide-01.webp" alt="" data-modal-content="./img/slide-01-wide.webp">
+                            <img class="slide-img sp modal-trigger" src="./img/slide-01-sp.webp" alt="" data-modal-content="./img/slide-01-sp-wide.webp">
+                        </div>
+                        <div class="slide">
+                            <img class="slide-img pc modal-trigger" src="./img/slide-02.webp" alt="" data-modal-content="./img/slide-02-wide.webp">
+                            <img class="slide-img sp modal-trigger" src="./img/slide-02-sp.webp" alt="" data-modal-content="./img/slide-02-sp-wide.webp">
+                        </div>
+                        <div class="slide">
+                            <img class="slide-img pc modal-trigger" src="./img/slide-03.webp" alt="" data-modal-content="./img/slide-03-wide.webp">
+                            <img class="slide-img sp modal-trigger" src="./img/slide-03-sp.webp" alt="" data-modal-content="./img/slide-03-sp-wide.webp">
+                        </div>
+                        <div class="slide">
+                            <img class="slide-img pc modal-trigger" src="./img/slide-04.webp" alt="" data-modal-content="./img/slide-04-wide.webp">
+                            <img class="slide-img sp modal-trigger" src="./img/slide-04-sp.webp" alt="" data-modal-content="./img/slide-04-sp-wide.webp">
+                        </div>
+                        <div class="slide">
+                            <img class="slide-img pc modal-trigger" src="./img/slide-05.webp" alt="" data-modal-content="./img/slide-05-wide.webp">
+                            <img class="slide-img sp modal-trigger" src="./img/slide-05-sp.webp" alt="" data-modal-content="./img/slide-05-sp-wide.webp">
+                        </div>
+                        <div class="slide">
+                            <img class="slide-img pc modal-trigger" src="./img/slide-06.webp" alt="" data-modal-content="./img/slide-06-wide.webp">
+                            <img class="slide-img sp modal-trigger" src="./img/slide-06.webp" alt="" data-modal-content="./img/slide-06-wide.webp">
+                        </div>
+                        <div class="slide">
+                            <img class="slide-img pc modal-trigger" src="./img/slide-07.webp" alt="" data-modal-content="./img/slide-07-wide.webp">
+                            <img class="slide-img sp modal-trigger" src="./img/slide-07.webp" alt="" data-modal-content="./img/slide-07-wide.webp">
+                        </div>
+                        <div class="slide">
+                            <img class="slide-img pc modal-trigger" src="./img/slide-08.webp" alt="" data-modal-content="./img/slide-08-wide.webp">
+                            <img class="slide-img sp modal-trigger" src="./img/slide-08.webp" alt="" data-modal-content="./img/slide-08-wide.webp">
+                        </div>
+                        <div class="slide">
+                            <img class="slide-img pc modal-trigger" src="./img/slide-09.webp" alt="" data-modal-content="./img/slide-09-wide.webp">
+                            <img class="slide-img sp modal-trigger" src="./img/slide-09.webp" alt="" data-modal-content="./img/slide-09-wide.webp">
+                        </div>
+                        <div class="slide">
+                            <img class="slide-img pc modal-trigger" src="./img/slide-10.webp" alt="" data-modal-content="./img/slide-10-wide.webp">
+                            <img class="slide-img sp modal-trigger" src="./img/slide-10.webp" alt="" data-modal-content="./img/slide-10-wide.webp">
+                        </div>
+                    </div>
+                </div>
+                <!-- モーダルウィンドウ -->
+                <div class="modal" id="modal">
+                    <div class="modal-content">
+                      <span class="close-button">×</span>
+                      <div id="modal-body"></div> <!-- ここに画像を挿入 -->
+                      <span class="close-button2">×</span>
                     </div>
                 </div>
                 <p class="p-center fadeup">
@@ -220,7 +263,7 @@
         </section>
     </main>
     <footer>
-        <div class="footer fadeup">
+        <div class="footer">
             <p><img src="./img/footer__logo.webp" alt="ピギャニャン"></p>
             <p>Miyamoto Yumiko</p>
             <ul class="footer-sns">

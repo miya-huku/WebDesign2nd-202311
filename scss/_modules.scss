@@ -103,7 +103,7 @@
                 top: 2px;
                 background-color: $base-01;
                 color: $text-01;
-                border: 1px solid $main-01;
+                border: 1px solid $main-02;
             }
         }
 
@@ -131,7 +131,7 @@
             &:hover{
                 position: relative;
                 top: 2px;
-                border: none;
+                border: $main-02;
                 background-color: $main-01;
                 color: $text-02;
             }

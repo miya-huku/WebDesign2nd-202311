@@ -64,3 +64,18 @@ li{
         }
     }
 }
+
+.sp{
+    display: none;
+    @include mq(sp){
+        display: block;
+    }
+}
+
+.pc{
+    display: block;
+    @include mq(sp){
+        display: none;;
+    }
+}
+

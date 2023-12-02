@@ -137,7 +137,13 @@
     }
 }
 .works{
-    background-color: $main-01;
+    background-color: $main-02;
+    h2{
+        color: $text-02;
+    }
+    p{
+        color: $text-02;
+    }
 }
 //スクロールしたら横に移動
 .box-02{
@@ -253,7 +259,7 @@
   
   .modal-content {
     background-color: #fefefe;
-    margin: 15% auto;
+    margin: 5% 15% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;

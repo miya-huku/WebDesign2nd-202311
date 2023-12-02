@@ -13,12 +13,17 @@
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
     <!-- style.css -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://web-pigyanyan.com/css/style.css">
 </head>
 <body>
     <header class="header">
         <div class="header-area">
-            <h1 class="header__logo fadeup"><img src="./img/header__logo.webp" alt="ピギャニャン's portfolio"></h1>
+            <h1 class="header__logo fadeup"><img src="https://web-pigyanyan.com/img/header__logo.webp" alt="ピギャニャン's portfolio"></h1>
+            <div class="header__icons fadeup">
+                <img src="https://web-pigyanyan.com/img/icon-okameinko.png" alt="ピ" class="header__icons__okame">
+                <img src="https://web-pigyanyan.com/img/icon_kozakura.png" alt="ギャ" class="header__icons__kozakura">
+                <img src="https://web-pigyanyan.com/img/icon-cat.png" alt="ニャン" class="header__icons__cat">
+            </div>
             <nav>
                 <ul class="navigation fadeup">
                     <li class="navigation__list"><a href="#about">About</a></li>
@@ -44,12 +49,14 @@
                     <li class="navigation__list"><a href="#contact">Content</a></li>
                 </ul>
             </nav>
-
-            <div class="header__scrollbox">
-                <p class="header__scrollbox__txt">Scroll</p>
-            </div>
         </div>
     </header>
+    <div class="header__scrollbox" id="floating-element">
+        <p class="header__scrollbox__txt">Scroll</p>
+    </div>
+    <div class="scrollbox-top" id="back-to-top">
+        <p class="scrollbox-top__txt">Top</p>
+    </div>
     <div class="main-visual">
         <h1 class="main-visual__catch1 fadeup">Webサイトの企画、制作、運用</h1>
         <p class="main-visual__catch2 fadeup">結果が出るサイト作りをめざします。</p>
@@ -63,8 +70,8 @@
                 </div>
                 <article class="about-box fadeup">
                     <div class="about-box__photo">
-                        <img class="about-box__photo__img1 fadeup" src="./img/about__photo1.webp" alt="">
-                        <img class="about-box__photo__img2 fadeup" src="./img/about__photo2.webp" alt="">
+                        <img class="about-box__photo__img1 fadeup" src="https://web-pigyanyan.com/img/about__photo1.webp" alt="">
+                        <img class="about-box__photo__img2 fadeup" src="https://web-pigyanyan.com/img/about__photo2.webp" alt="">
                     </div>
                     <div class="about-box-content">
                         <p class="about-box-content__comment fadeup">
@@ -81,9 +88,9 @@
                         <p class="about-box-content__name fadeup">ピギャニャン代表<br>宮本ゆみ子</p>
                         <h3 class="fadeup">提供可能なスキル</h3>
                         <p class="about-box-content__comment2 fadeup">
-                            お困りごとがWebで解決できるかどうかのご相談、Figma,XDを使用してのWebサイトの提案、デザイン、コーディング、<br>
-                            HTML,CSS, Javascript, Wordpress,  PHP, Python, API, 各種サーバー設定、<br>
-                            Photoshop, Illustrator, Canvaを使った紙媒体のデザイン（名刺、リーフレット、冊子等）、<br>
+                            お困りごとがWebで解決できるかどうかのご相談、Figma,XDを使用してのWebサイトの提案、デザイン、コーディング、<br class="pc">
+                            HTML,CSS, Javascript, Wordpress,  PHP, Python, API, 各種サーバー設定、<br class="pc">
+                            Photoshop, Illustrator, Canvaを使った紙媒体のデザイン（名刺、リーフレット、冊子等）、<br class="pc">
                             動画作成
                         </p>
                         <div class="about-small">
@@ -110,44 +117,44 @@
                 <div class="box-02">
                     <div class="slides-wrapper fadeup">
                         <div class="slide">
-                            <img class="slide-img pc modal-trigger" src="./img/slide-01.webp" alt="" data-modal-content="./img/slide-01-wide.webp">
-                            <img class="slide-img sp modal-trigger" src="./img/slide-01-sp.webp" alt="" data-modal-content="./img/slide-01-sp-wide.webp">
+                            <img class="slide-img pc modal-trigger" src="https://web-pigyanyan.com/img/slide-01.webp" alt="" data-modal-content="https://web-pigyanyan.com/img/slide-01-wide.webp">
+                            <img class="slide-img sp modal-trigger" src="https://web-pigyanyan.com/img/slide-01-sp.webp" alt="" data-modal-content="https://web-pigyanyan.com/img/slide-01-sp-wide.webp">
                         </div>
                         <div class="slide">
-                            <img class="slide-img pc modal-trigger" src="./img/slide-02.webp" alt="" data-modal-content="./img/slide-02-wide.webp">
-                            <img class="slide-img sp modal-trigger" src="./img/slide-02-sp.webp" alt="" data-modal-content="./img/slide-02-sp-wide.webp">
+                            <img class="slide-img pc modal-trigger" src="https://web-pigyanyan.com/img/slide-02.webp" alt="" data-modal-content="https://web-pigyanyan.com/img/slide-02-wide.webp">
+                            <img class="slide-img sp modal-trigger" src="https://web-pigyanyan.com/img/slide-02-sp.webp" alt="" data-modal-content="https://web-pigyanyan.com/img/slide-02-sp-wide.webp">
                         </div>
                         <div class="slide">
-                            <img class="slide-img pc modal-trigger" src="./img/slide-03.webp" alt="" data-modal-content="./img/slide-03-wide.webp">
-                            <img class="slide-img sp modal-trigger" src="./img/slide-03-sp.webp" alt="" data-modal-content="./img/slide-03-sp-wide.webp">
+                            <img class="slide-img pc modal-trigger" src="https://web-pigyanyan.com/img/slide-03.webp" alt="" data-modal-content="https://web-pigyanyan.com/img/slide-03-wide.webp">
+                            <img class="slide-img sp modal-trigger" src="https://web-pigyanyan.com/img/slide-03-sp.webp" alt="" data-modal-content="https://web-pigyanyan.com/img/slide-03-sp-wide.webp">
                         </div>
                         <div class="slide">
-                            <img class="slide-img pc modal-trigger" src="./img/slide-04.webp" alt="" data-modal-content="./img/slide-04-wide.webp">
-                            <img class="slide-img sp modal-trigger" src="./img/slide-04-sp.webp" alt="" data-modal-content="./img/slide-04-sp-wide.webp">
+                            <img class="slide-img pc modal-trigger" src="https://web-pigyanyan.com/img/slide-04.webp" alt="" data-modal-content="https://web-pigyanyan.com/img/slide-04-wide.webp">
+                            <img class="slide-img sp modal-trigger" src="https://web-pigyanyan.com/img/slide-04-sp.webp" alt="" data-modal-content="https://web-pigyanyan.com/img/slide-04-sp-wide.webp">
                         </div>
                         <div class="slide">
-                            <img class="slide-img pc modal-trigger" src="./img/slide-05.webp" alt="" data-modal-content="./img/slide-05-wide.webp">
-                            <img class="slide-img sp modal-trigger" src="./img/slide-05-sp.webp" alt="" data-modal-content="./img/slide-05-sp-wide.webp">
+                            <img class="slide-img pc modal-trigger" src="https://web-pigyanyan.com/img/slide-05.webp" alt="" data-modal-content="https://web-pigyanyan.com/img/slide-05-wide.webp">
+                            <img class="slide-img sp modal-trigger" src="https://web-pigyanyan.com/img/slide-05-sp.webp" alt="" data-modal-content="https://web-pigyanyan.com/img/slide-05-sp-wide.webp">
                         </div>
                         <div class="slide">
-                            <img class="slide-img pc modal-trigger" src="./img/slide-06.webp" alt="" data-modal-content="./img/slide-06-wide.webp">
-                            <img class="slide-img sp modal-trigger" src="./img/slide-06.webp" alt="" data-modal-content="./img/slide-06-wide.webp">
+                            <img class="slide-img pc modal-trigger" src="https://web-pigyanyan.com/img/slide-06.webp" alt="" data-modal-content="https://web-pigyanyan.com/img/slide-06-wide.webp">
+                            <img class="slide-img sp modal-trigger" src="https://web-pigyanyan.com/img/slide-06.webp" alt="" data-modal-content="https://web-pigyanyan.com/img/slide-06-wide.webp">
                         </div>
                         <div class="slide">
-                            <img class="slide-img pc modal-trigger" src="./img/slide-07.webp" alt="" data-modal-content="./img/slide-07-wide.webp">
-                            <img class="slide-img sp modal-trigger" src="./img/slide-07.webp" alt="" data-modal-content="./img/slide-07-wide.webp">
+                            <img class="slide-img pc modal-trigger" src="https://web-pigyanyan.com/img/slide-07.webp" alt="" data-modal-content="https://web-pigyanyan.com/img/slide-07-wide.webp">
+                            <img class="slide-img sp modal-trigger" src="https://web-pigyanyan.com/img/slide-07.webp" alt="" data-modal-content="https://web-pigyanyan.com/img/slide-07-wide.webp">
                         </div>
                         <div class="slide">
-                            <img class="slide-img pc modal-trigger" src="./img/slide-08.webp" alt="" data-modal-content="./img/slide-08-wide.webp">
-                            <img class="slide-img sp modal-trigger" src="./img/slide-08.webp" alt="" data-modal-content="./img/slide-08-wide.webp">
+                            <img class="slide-img pc modal-trigger" src="https://web-pigyanyan.com/img/slide-08.webp" alt="" data-modal-content="https://web-pigyanyan.com/img/slide-08-wide.webp">
+                            <img class="slide-img sp modal-trigger" src="https://web-pigyanyan.com/img/slide-08.webp" alt="" data-modal-content="https://web-pigyanyan.com/img/slide-08-wide.webp">
                         </div>
                         <div class="slide">
-                            <img class="slide-img pc modal-trigger" src="./img/slide-09.webp" alt="" data-modal-content="./img/slide-09-wide.webp">
-                            <img class="slide-img sp modal-trigger" src="./img/slide-09.webp" alt="" data-modal-content="./img/slide-09-wide.webp">
+                            <img class="slide-img pc modal-trigger" src="https://web-pigyanyan.com/img/slide-09.webp" alt="" data-modal-content="https://web-pigyanyan.com/img/slide-09-wide.webp">
+                            <img class="slide-img sp modal-trigger" src="https://web-pigyanyan.com/img/slide-09.webp" alt="" data-modal-content="https://web-pigyanyan.com/img/slide-09-wide.webp">
                         </div>
                         <div class="slide">
-                            <img class="slide-img pc modal-trigger" src="./img/slide-10.webp" alt="" data-modal-content="./img/slide-10-wide.webp">
-                            <img class="slide-img sp modal-trigger" src="./img/slide-10.webp" alt="" data-modal-content="./img/slide-10-wide.webp">
+                            <img class="slide-img pc modal-trigger" src="https://web-pigyanyan.com/img/slide-10.webp" alt="" data-modal-content="https://web-pigyanyan.com/img/slide-10-wide.webp">
+                            <img class="slide-img sp modal-trigger" src="https://web-pigyanyan.com/img/slide-10.webp" alt="" data-modal-content="https://web-pigyanyan.com/img/slide-10-wide.webp">
                         </div>
                     </div>
                 </div>
@@ -179,7 +186,7 @@
                 <div class="plan-list">
                     <article class="plan-list-box fadeup">
                         <div class="plan-list-box-img">
-                            <img class="plan-list-box-img__photo" src="./img/plan__img1.webp" alt="plan1">
+                            <img class="plan-list-box-img__photo" src="https://web-pigyanyan.com/img/plan__img1.webp" alt="plan1">
                             <p class="plan-list-box-img__label">
                                 名刺がわりに<br>
                                 シンプルな１ページだけの<br>
@@ -195,7 +202,7 @@
                     </article>
                     <article class="plan-list-box fadeup">
                         <div class="plan-list-box-img">
-                            <img class="plan-list-box-img__photo" src="./img/plan__img2.webp" alt="plan2">
+                            <img class="plan-list-box-img__photo" src="https://web-pigyanyan.com/img/plan__img2.webp" alt="plan2">
                             <p class="plan-list-box-img__label">
                                 会社の紹介をしたいから<br>
                                 必要最低限のページがある<br>
@@ -211,7 +218,7 @@
                     </article>
                     <article class="plan-list-box fadeup">
                         <div class="plan-list-box-img">
-                            <img class="plan-list-box-img__photo" src="./img/plan__img3.webp" alt="plan3">
+                            <img class="plan-list-box-img__photo" src="https://web-pigyanyan.com/img/plan__img3.webp" alt="plan3">
                             <p class="plan-list-box-img__label">
                                 ワードプレスを使って<br>
                                 自分で更新できる<br>
@@ -227,7 +234,7 @@
                     </article>
                     <article class="plan-list-box fadeup">
                         <div class="plan-list-box-img">
-                            <img class="plan-list-box-img__photo" src="./img/plan__img4.webp" alt="plan4">
+                            <img class="plan-list-box-img__photo" src="https://web-pigyanyan.com/img/plan__img4.webp" alt="plan4">
                             <p class="plan-list-box-img__label">
                                 希望を全て叶えてくれる<br>サイトにしたい！
                             </p>
@@ -262,22 +269,27 @@
             </div>
         </section>
     </main>
-    <footer>
-        <div class="footer">
-            <p><img src="./img/footer__logo.webp" alt="ピギャニャン"></p>
-            <p>Miyamoto Yumiko</p>
-            <ul class="footer-sns">
-                <li><a href="https://twitter.com/3sgWg2" target="_blank" rel="noopener noreferrer"><img src="./img/icon__x.webp" alt="x"></a></li>
-                <li><a href="#contact" target="_blank" rel="noopener noreferrer"><img src="./img/icon__mail.webp" alt="お問い合わせ"></a></li>
+    <footer id="footer">
+        <div class="footer fadeup">
+            <p class="fadeup"><a href="#"><img src="https://web-pigyanyan.com/img/footer__logo.webp" alt="ピギャニャン"></a></p>
+            <div class="footer__icons fadeup">
+                <img src="https://web-pigyanyan.com/img/icon-okameinko-white.png" alt="ピ" class="header__icons__okame">
+                <img src="https://web-pigyanyan.com/img/icon_kozakura-white.png" alt="ギャ" class="header__icons__kozakura">
+                <img src="https://web-pigyanyan.com/img/icon-cat-white.png" alt="ニャン" class="header__icons__cat">
+            </div>
+            <p class="fadeup">Miyamoto Yumiko</p>
+            <ul class="footer-sns fadeup">
+                <li><a href="https://twitter.com/3sgWg2" target="_blank" rel="noopener noreferrer"><img src="https://web-pigyanyan.com/img/icon__x.webp" alt="x"></a></li>
+                <li><a href="#contact" target="_blank" rel="noopener noreferrer"><img src="https://web-pigyanyan.com/img/icon__mail.webp" alt="お問い合わせ"></a></li>
             </ul>
-            <p><small>&copy; ピギャニャン</small></p>
+            <p class="fadeup"><small>&copy; ピギャニャン</small></p>
         </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="./js/gsap-slides.js"></script>
-    <script src="./js/scrollheader.js"></script>
-    <script src="./js/gsap-smooth.js"></script>
+    <script src="https://web-pigyanyan.com/js/gsap-slides.js"></script>
+    <script src="https://web-pigyanyan.com/js/scrollheader.js"></script>
+    <script src="https://web-pigyanyan.com/js/gsap-smooth.js"></script>
 
 </body>
 </html>

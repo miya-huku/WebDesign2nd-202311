@@ -96,18 +96,136 @@ links.forEach(link => {
   });
 });
 
-
+const works = document.getElementById('works');
 window.addEventListener('scroll', function() {
+  const body = document.body;
   const scrollTop = window.scrollY;
   const scrollHeight = document.documentElement.scrollHeight;
   const clientHeight = document.documentElement.clientHeight;
-
   const atBottom = scrollTop + clientHeight >= scrollHeight;
+  const backToTopButton = document.getElementById('back-to-top');
+  const worksrect = works.getBoundingClientRect();
 
   if (atBottom) {
     // ここで、一番下に達した際のスクロールを制御する処理を記述
-    // 例えば、一番下に達したらスクロールを少し上に戻す
     window.scrollTo(0, scrollHeight - clientHeight);
   }
+  if (scrollTop === 0) {
+    // ここで、一番上に達した際のスクロールを制御する処理を記述
+    body.scrollTop = 0;
+  }
+  if (window.scrollY > window.innerHeight) {
+    // ビューポートの高さを超えたらボタンを表示
+    gsap.to(backToTopButton, { duration: 0.5, opacity: 1, display: 'block' });
+    backToTopButton.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+  } else {
+    // それ以外の場合は非表示に
+    gsap.to(backToTopButton, { duration: 0.5, opacity: 0, display: 'none' });
+  }
+});
+
+// GSAPを使用して要素をふわふわと上下に動かす
+gsap.to("#floating-element", {
+  y: 20, // 20px上下に動かす
+  duration: 2, // 2秒かけて動かす
+  ease: "power1.inOut",
+  yoyo: true,
+  repeat: -1 // 繰り返し無限
+});
+
+// 要素をクリックしたときにスクロールを200px下に動かす
+document.getElementById("floating-element").addEventListener("click", function() {
+  // 現在のスクロール位置を取得
+  const currentScroll = window.scrollY;
+  // 現在のビューポートの高さを取得
+  var viewportHeight = window.innerHeight;
+  // viewportHeight分下にスクロール
+  window.scrollTo({
+    top: currentScroll + viewportHeight,
+    behavior: "smooth" // スムーススクロール
+  });
+});
+
+
+
+function changeStyles(color) {
+  const floatingElement = document.getElementById("floating-element");
+  const backToTop = document.getElementById("back-to-top");
+
+  // 文字色の変更
+  floatingElement.style.color = color;
+  backToTop.style.color = color;
+
+  // ボーダー色の変更
+  floatingElement.style.borderColor = color;
+  backToTop.style.borderColor = color;
+  
+}
+
+function changeStyles(isEntering) {
+  const floatingElement = document.getElementById("floating-element");
+  const backToTop = document.getElementById("back-to-top");
+
+  // 文字色、ボーダー色、背景グラデーションの変更
+  const color = isEntering ? "white" : ""; // エリアに入ったかに基づく色
+  const gradient1 = isEntering ? "linear-gradient(302deg, transparent 0%, transparent 27%, #ffffff 1%, #ffffff 28%, transparent 0, transparent 100%)" : ""; // エリアに入ったかに基づくグラデーション
+  const gradient2 = isEntering ? "linear-gradient(120deg, transparent 0%, transparent 24%, #ffffff 1%, #ffffff 27%, transparent 0, transparent 100%)" : ""; // エリアに入ったかに基づくグラデーション
+
+  floatingElement.style.color = color;
+  backToTop.style.color = color;
+  floatingElement.style.borderColor = color;
+  backToTop.style.borderColor = color;
+  floatingElement.style.background = gradient1;
+  backToTop.style.background = gradient2;
+}
+
+ScrollTrigger.create({
+  trigger: "#works",
+  start: "top center",
+  end: "bottom center",
+  onEnter: () => changeStyles(true),
+  onLeave: () => changeStyles(false),
+  onEnterBack: () =>　changeStyles(false),
+  onLeaveBack: () => changeStyles(false),
+});
+
+ScrollTrigger.create({
+  trigger: "#footer",
+  start: "top center",
+  end: "bottom center",
+  onEnter: () => changeStyles(true),
+  onLeave: () => changeStyles(false),
+  onEnterBack: () => changeStyles(false),
+  onLeaveBack: () => changeStyles(false),
+});
+
+
+
+const floatingTween = gsap.to("#floating-element", {
+  y: 20,
+  duration: 2,
+  ease: "power1.inOut",
+  yoyo: true,
+  repeat: -1
+});
+
+// #content 領域の下部に到達した際の処理
+ScrollTrigger.create({
+  trigger: "#contact",
+  start: "top center", // #content の下部がビューポートの下部に来た時
+  end: "bottom center",
+  onEnter: () => floatingTween.pause(), // 動きを停止
+  onLeaveBack: () => floatingTween.resume() // 逆スクロールで動きを再開
+});
+
+ScrollTrigger.create({
+  trigger: "#footer",
+  start: "top center", // #content の下部がビューポートの下部に来た時
+  end: "bottom center",
+  onEnter: () => floatingTween.pause(), // 動きを停止
+  onLeaveBack: () => floatingTween.resume() // 逆スクロールで動きを再開
 });
 

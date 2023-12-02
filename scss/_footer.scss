@@ -13,6 +13,19 @@
             width: 132px;
         }
     }
+    &__icons{
+        width: fit-content;
+        margin: auto;
+        &__okame{
+            height: 36px;
+        }
+        &__kozakura{
+            height: 28px;
+        }
+        &__cat{
+            height: 30px;
+        }
+    }
     &-sns{
         display: flex;
         flex-wrap: wrap;
@@ -25,5 +38,31 @@
                 height: 20px;
             }
         }
+    }
+}
+
+#back-to-top {
+    display: none; /* 初期状態では非表示 */
+    position: fixed; /* 画面に固定 */
+    bottom: 20px; /* 下から20pxの位置 */
+    right: 20px; /* 右から20pxの位置 */
+    /* その他のスタイルは必要に応じて追加 */
+  }
+
+
+.scrollbox-top{
+    border-right:1px solid $text-01;
+    background: linear-gradient(120deg, transparent 0%, transparent 24%, #323232 1%, #323232 27%, transparent 0, transparent 100%);
+    width: 10px;
+    height: 42px;
+    padding: 0px;
+    z-index: 99;
+    &__txt{
+        font-family: $oswald;
+        font-weight: 300;
+        font-size: 14px;
+        position: absolute;
+        top:18px;
+        right: 2px;
     }
 }

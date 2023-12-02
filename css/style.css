@@ -503,8 +503,47 @@ li {
     width: 100%;
   }
 }
-.header__scrollbox {
+.header__icons {
+  width: 80%;
+  margin: auto;
   position: absolute;
+}
+@media screen and (max-width:599px) {
+  .header__icons {
+    top: 26px;
+    left: 130px;
+    width: fit-content;
+  }
+}
+.header__icons__okame {
+  height: 36px;
+  opacity: 0.8;
+}
+@media screen and (max-width:599px) {
+  .header__icons__okame {
+    height: 24px;
+  }
+}
+.header__icons__kozakura {
+  height: 28px;
+  opacity: 0.8;
+}
+@media screen and (max-width:599px) {
+  .header__icons__kozakura {
+    height: 22px;
+  }
+}
+.header__icons__cat {
+  height: 30px;
+  opacity: 0.8;
+}
+@media screen and (max-width:599px) {
+  .header__icons__cat {
+    height: 24px;
+  }
+}
+.header__scrollbox {
+  position: fixed;
   left: 60px;
   bottom: 60px;
   border-left: 1px solid #323232;
@@ -512,6 +551,7 @@ li {
   width: 14px;
   height: 92px;
   padding: 10px;
+  z-index: 99;
 }
 .header__scrollbox__txt {
   font-family: "Oswald", sans-serif;
@@ -539,6 +579,20 @@ li {
 .header__scroll__logo img {
   width: 100%;
 }
+.header__scroll__icons {
+  top: 26px;
+  left: 130px;
+  width: fit-content;
+}
+.header__scroll__icons__okame {
+  height: 28px;
+}
+.header__scroll__icons__kozakura {
+  height: 22px;
+}
+.header__scroll__icons__cat {
+  height: 24px;
+}
 
 /* .header-scrollが追加されたときのスタイル */
 .header-scroll {
@@ -560,6 +614,21 @@ li {
   min-height: unset;
   position: fixed;
   padding: 0;
+}
+
+.header-scroll .header__icons {
+  top: 26px;
+  left: 130px;
+  width: fit-content;
+}
+.header-scroll .header__icons__okame {
+  height: 28px;
+}
+.header-scroll .header__icons__kozakura {
+  height: 22px;
+}
+.header-scroll .header__icons__cat {
+  height: 24px;
 }
 
 /* .header__logoのスタイル変更 */
@@ -630,6 +699,11 @@ li {
   padding-top: 24px;
 }
 
+#floating-element {
+  position: fixed;
+  cursor: pointer;
+}
+
 .footer {
   width: 100%;
   background-color: #34321e;
@@ -643,6 +717,19 @@ li {
 .footer p img {
   width: 132px;
 }
+.footer__icons {
+  width: fit-content;
+  margin: auto;
+}
+.footer__icons__okame {
+  height: 36px;
+}
+.footer__icons__kozakura {
+  height: 28px;
+}
+.footer__icons__cat {
+  height: 30px;
+}
 .footer-sns {
   display: flex;
   flex-wrap: wrap;
@@ -655,6 +742,31 @@ li {
 }
 .footer-sns li img {
   height: 20px;
+}
+
+#back-to-top {
+  display: none; /* 初期状態では非表示 */
+  position: fixed; /* 画面に固定 */
+  bottom: 20px; /* 下から20pxの位置 */
+  right: 20px; /* 右から20pxの位置 */
+  /* その他のスタイルは必要に応じて追加 */
+}
+
+.scrollbox-top {
+  border-right: 1px solid #323232;
+  background: linear-gradient(120deg, transparent 0%, transparent 24%, #323232 1%, #323232 27%, transparent 0, transparent 100%);
+  width: 10px;
+  height: 42px;
+  padding: 0px;
+  z-index: 99;
+}
+.scrollbox-top__txt {
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  position: absolute;
+  top: 18px;
+  right: 2px;
 }
 
 .main-visual {
@@ -804,7 +916,13 @@ li {
 }
 
 .works {
-  background-color: #FFE601;
+  background-color: #323232;
+}
+.works h2 {
+  color: #FFFFFF;
+}
+.works p {
+  color: #FFFFFF;
 }
 
 .box-02 {
@@ -923,7 +1041,7 @@ li {
 
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto;
+  margin: 5% 15% auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
